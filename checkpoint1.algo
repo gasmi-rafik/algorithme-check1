@@ -1,0 +1,29 @@
+ALGORITHM elements
+VAR
+    putchar  : CHAR ;
+    count , i: INTEGER ;
+    words : INTEGER ;
+    voyelles : INTEGER ;
+    wordlength : STRING ;
+    tab_voyelles : ARRAY_OF STRING["aeyuio"];
+BEGIN
+    count := 0;
+    words := 0; 
+    voyelles := 0 ;
+
+    WHILE (putchar <> ".") DO
+        Read (putchar) ;
+        count = count + 1 ;
+        Write ("le nombre de character est " count);
+        wordlength+= putchar ;
+        IF (putchar == " ") THEN
+            words = words + 1 ;
+            Write ("le nombre de character est " words); 
+            
+            ELSE_IF (putchar.ToLowerCase = "a" || putchar.ToLowerCase = "e" || putchar.ToLowerCase ="y" || putchar.ToLowerCase ="u" || putchar.ToLowerCase ="i" || putchar.ToLowerCase ="o") THEN
+            voyelles = voyelles +1 ;
+              Write ("le nombre de character est " voyelle);  
+            END_IF
+        END_IF
+    END_WHILE
+END
